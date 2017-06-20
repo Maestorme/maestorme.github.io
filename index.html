@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta name="keywords" content="programmer, designer, karthick, shankar, purdue, engineering"  />
+  <meta name="description" content="Karthick Shankar - Designer / Programmer / Engineer"  />
+  <meta name="copyright" content="Karthick Shankar"  />
+  <meta name="author" content="Karthick Shankar"  />
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/animate.css">    
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/font-awesome.css">
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  <title>Karthick Shankar</title>
+
+</head>
+
+<body>
+
+<div id='container'>
+
+<!-- -=-=-=-=-=-=-=-=-=-=NAVBAR=-=-=-=-=-=-=-=-=-=- -->
+  <div class='nav nav-down'>
+    <h3><a href=#home>&lt;KARTHICK/&gt;</a></h3>
+    <button class="hamburger hamburger--spin" type="button">
+      <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <ul class='nav-content-big'>
+      <li><a href='#about'><div>about</div></a></li>
+      <li><a href='#projects'><div>projects</div></a></li>
+      <li><a href='#skills'><div>skills</div></a></li>
+      <li><a href='#contact'><div>contact</div></a></li>
+      <li><a href='#resume'><div>resume</div></a></li>
+    </ul>
+  </div>
+
+
+
+  <div class='nav-overlay'>
+    <ul class='nav-overlay-content'>
+      <li id = 'n1' class = 'animated'><a href='#about'>About</a></li>
+      <li id = 'n2' class = 'animated'><a href='#projects'>Projects</a></li>
+      <li id = 'n3' class = 'animated'><a href='#skills'>Skills</a></li>
+      <li id = 'n4' class = 'animated'><a href='#contact'>Contact</a></li>
+      <li id = 'n5' class = 'animated'><a href='#'>Resume</a></li>
+    </ul>
+  </div>
+
+<!-- -=-=-=-=-=-=-=-=-=-=HOME=-=-=-=-=-=-=-=-=-=- -->
+  <div id='home'>
+    <div class = 'animated fadeInDown'>
+    <h5>Hello! I'm</h5>
+    <h1 id = "title">KARTHICK SHANKAR</h1>
+
+    <div class = "line-elements">
+      <h5>Pronounced /karTHik/ or car+thick</h5>
+      <h6 style = "font-family: VT323">&lt;Programmer&gt;</h6>
+      <h6>  |  </h6>
+      <h6 style = "font-family: Cinzel">ENGINEER</h6>
+      <h6>  |  </h6>
+      <h6 style = "font-family: Raleway">Designer</h6>
+      <h6>  |  </h6>
+      <h6>Musician</h6>
+    </div>
+
+    <div class='mousey'>
+      <div class='scroller'></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- -=-=-=-=-=-=-=-=-=-=ABOUT=-=-=-=-=-=-=-=-=-=- -->
+
+<div id='particles-js'></div>
+
+<div id = 'about' class='about'>
+
+  <h2 class = "heading">ABOUT</h2>
+  <div class='h-underline'></div>
+  <img src="img/me.png"/>
+  <p>
+    Hey! I'm Karthick Shankar, a Sophomore at <a href='http://www.purdue.edu' class = 'link'>Purdue University</a>. I'm currently in the department of Electrical and Computer Engineering, pursuing a bachelor's degree in Computer Engineering. I am fascinated and enthusiastic about technology and I feel like I can bring about a ripple in the sea of the world. I'm a seasoned developer and designer.
+    <br><br>
+    Besides technology and programming, I am an avid musician and a relentless orator. All of my varied experiences are what makes me a unique point of interest! 
+    <br><br>
+    I do a lot of graphic designing and video editing, and I'm availabe for <a href='#contact' class='link'>freelancing jobs</a> in any of these fields including web development!
+  </p>
+  <br class='clear'/>
+</div> 
+
+<!-- -=-=-=-=-=-=-=-=-=-=PROJECTS=-=-=-=-=-=-=-=-=-=- -->
+
+<div id='projects'>
+  <h2 class = "heading">PROJECTS</h2>
+  <div class = 'h-underline'></div>
+
+  <ul id='proj-boxes'>
+    <li><div id = 'p4' class = 'projbox' style='background-image: url(img/4.jpg)'></div></li>
+    <li><div id = 'p3' class = 'projbox' style='background-image: url(img/3.jpg)'></div></li>
+    <li><div id = 'p2' class = 'projbox' style='background-image: url(img/2.jpg)'></div></li>
+    <li><div id = 'p1' class = 'projbox' style='background-image: url(img/1.jpg)'></div></li>
+  </ul>
+  
+  <br class='clear'/>
+</div>
+
+<div class = 'modal'>
+  <img src='img/close.png' id='close-button' class='modal-button-close' style='float:left'/>
+  <h2 id='proj-title' class = 'heading'></h2>
+  <p id='proj-caption'></p>
+  <div class = 'modal-content'>
+    <img src='img/left.png' id = 'left-button' class='modal-button' style='float:left' />
+    <img src='img/right.png' id = 'right-button' class='modal-button' style='float:right'/>
+  </div>
+  <p id='proj-text'></p>
+</div>
+
+<!-- -=-=-=-=-=-=-=-=-=-=SKILLS=-=-=-=-=-=-=-=-=-=- -->
+<div id='skills'>
+  <h2 class='heading'>SKILLS</h2>
+  <div class = 'h-underline'></div>
+
+  <ul>
+  <li><div id='programmingS' class='softwareDiv'>
+    <i class="fa fa-code fa-2x"></i>
+    <h3>PROGRAMMING</h3>
+    <ul>
+      <li>Python</li>
+      <li>C</li>
+      <li>MATLAB</li>
+      <li>SQL</li>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Javascript</li>
+      <li>jQuery</li>
+    </ul>
+  </div></li>
+  
+
+  <li><div id='softwareS' class='softwareDiv'>
+    <i class="fa fa-laptop fa-2x"></i>
+    <h3>SOFTWARE</h3>
+    <ul>
+      <li>Adobe Photoshop</li>
+      <li>Adobe After Effects</li>
+      <li>Solidworks</li>
+      <li>CATIA</li>
+      <li>Sony Vegas Pro</li>
+      <li>Cinema 4D</li>
+      <li>Blender</li>
+    </ul>
+  </div></li>
+
+  <li><div id='engineeringS' class='softwareDiv'>
+    <i class="fa fa-gears fa-2x"></i>
+    <h3>ENGINEERING</h3>
+    <ul>
+      <li>3D Printing</li>
+      <li>Arduino Microcontrollers</li>
+      <li>Computer Aided Manufacture</li>
+      <li>CNC Milling</li>
+      <li>Circuits.io</li>
+      <li>Soldering</li>
+    </ul>
+  </div></li>
+  </ul>
+  <br class='clear'/>
+</div>
+
+<div id='post-skills'>
+  <h3 class='heading'>LIKE WHAT YOU SEE?</h3>
+  <h4>I am available for any freelance projects, so if you want <span class='element'></span><br> you know who to contact!</h4>
+
+  <a href='mailto:maestorme@gmail.com' class='button-link'><div class='post-skills-button'>
+    <p>Hello!    <i class='fa fa-hand-peace-o'></i></p>
+  </div></a>
+
+  <a href='files/resume.pdf' class='button-link'><div class='post-skills-button'>
+    <p>Resume!    <i class='fa fa-file'></i></p>
+  </div></a>
+
+  <br class='clear'/>
+</div>
+
+<!-- -=-=-=-=-=-=-=-=-=-=CONTACT=-=-=-=-=-=-=-=-=-=- -->
+
+<div id = 'contact'>
+      <h2 class = "heading">CONTACT!</h2>
+      <div class = 'h-underline'></div>
+      <ul>
+        <li class="email">
+          <a href="mailto: maestorme@gmail.com">
+            <i class="fa fa-envelope fa-4x"></i>
+            <p class="emailText">
+                Email
+            </p>
+          </a>
+        </li>
+        <li class="linkedin">
+          <a href="http://linkedin.com/">
+            <i class="fa fa-linkedin fa-4x"></i>
+            <p>LinkedIn</p>
+          </a>
+        </li>
+        <li class="github">
+          <a href="https://github.com/">
+            <i class="fa fa-github fa-4x"></i>
+            <p>GitHub</p>
+          </a>
+        </li>
+
+        <li class="facebook">
+          <a href="https://www.facebook.com/">
+            <i class="fa fa-facebook-official fa-4x"></i>
+            <p>Facebook</p>
+          </a>
+        </li>
+      </ul>
+
+      <p style='color: #1e2e3d; font-size: 0.8rem'>2017  Karthick Shankar<br>Contact for any queries</p>
+      <br class='clear'/>
+    </div>
+
+<!-- -=-=-=-=-=-=-=-=-=-=JS SCRIPTS=-=-=-=-=-=-=-=-=-=- -->
+
+<script src="js/hamburger.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/typed.js"></script>
+<script src="js/scroll.js"></script>
+<script>
+  $(function(){
+    $(".element").typed({
+      strings: ["a website built,", "a movie or film edited,", "graphic designing,"],
+      typeSpeed: 1,
+      loop: null
+    });
+  });
+</script>
+
+</body>
+
+</html>

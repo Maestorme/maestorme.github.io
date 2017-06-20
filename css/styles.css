@@ -1,0 +1,814 @@
+/* =============================================================================
+   Resets and Initalization
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:100|Roboto:100|VT323|Cinzel');
+
+@font-face {
+  font-family: 'Glober';
+  src: url('../fonts/glober.otf');
+}
+
+::selection{
+  background: #b8bfff; /* WebKit/Blink Browsers */
+}
+
+/* -=-=-=-=-=-=-=-=-=-=RESPONSIVE CSS=-=-=-=-=-=-=-=-=-=- */
+@media screen and (min-width: 400px){
+  html{
+    font-size: 110%;
+  }
+}
+
+@media screen and (min-width: 750px){
+  html{
+    font-size: 130%;
+  }
+}
+
+@media screen and (min-width: 1000px){
+  html{
+    font-size: 150%;
+  }
+}
+
+/* =============================================================================
+   Main CSS
+   ========================================================================== */
+
+#container{
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+.heading {
+  padding: 1rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 100;
+  color: #b8bfff;
+}
+
+.link{
+  border-bottom: 0.03rem solid;
+  font-weight: 300;
+  transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+
+}
+
+.link:hover{
+  opacity: 0.8;
+}
+
+.link-blue-no-underline{
+  color: #00c3ff;
+  font-weight: 100;
+  transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+
+}
+
+.link-blue-no-underline:hover{
+  color: rgba(0, 195, 255, 0.8);
+}
+
+.bolden{
+  font-weight: 300;
+}
+
+.h-underline{
+  border-bottom: solid 0.1rem #b8bfff;
+  width: 2rem; 
+  height: 0.1rem; 
+  margin: auto; 
+  margin-bottom: 1rem;
+}
+
+.clear {
+  clear:both;
+}
+/* -=-=-=-=-=-=-=-=-=-=NAVBAR CSS=-=-=-=-=-=-=-=-=-=- */
+@media screen and (min-width: 769px){
+  /*Killing Old Classes*/
+  .nav-overlay, .hamburger, .hamburger--spin, .hamburger-box, .hamburger-inner{
+    display: none;
+  }
+
+  /*NEW CSS*/
+  .nav{
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    height: 2.8rem;
+    background-color: rgba(0, 0, 0, 0.36);
+    transition: background-color 0.6s ease-in-out;
+
+  }
+
+  .nav h3{
+    padding-left: 0.4rem;
+    float: left;
+    font-family: "Roboto";
+    color: #b8bfff;
+    font-weight: 100;
+    font-size: 1rem;
+    line-height: 2.8rem;
+    border-bottom: transparent solid 0px;
+  } 
+
+  .nav .nav-content-big{
+    list-style-type: none;
+    margin: 0px;
+    float: right;
+    line-height: 2.8rem;
+
+  }
+
+  .nav .nav-content-big li{
+    display: inline-block;
+    text-align: center;
+  }
+
+  .nav .nav-content-big li div{
+    color: #b8bfff;
+    font-family: "Glober";
+    font-size: 1rem;
+    font-weight: 100;
+    width: 4rem;
+    height: 2.6rem;
+    border-bottom: solid 0.1rem transparent;
+
+    transition: border-bottom 0.2s ease-in-out;
+    -o-transition: border-bottom 0.2s ease-in-out;
+    -moz-transition: border-bottom 0.2s ease-in-out;
+    -webkit-transition: border-bottom 0.2s ease-in-out;
+
+  }
+
+  .nav .nav-content-big li div:hover{
+    border-bottom: solid 0.1rem #b8bfff;
+  }
+
+  .scrolled{
+    background-color: rgb(0, 0, 0);
+  }
+}
+
+/*CSS FOR SMALLER DISPLAYS*/
+
+@media screen and (max-width: 768px){
+  /*Killing old Classes*/
+  .nav-content-big{
+    display: none;
+  }
+  .nav {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    -webkit-transition: top 0.2s ease-in-out;
+    -moz-transition: top 0.2s ease-in-out;
+    -o-transition: top 0.2s ease-in-out;
+
+  }
+
+  .nav h3{
+    float: left;
+    font-family: "Roboto";
+    font-weight: 100;
+    color: #b8bfff;
+    line-height: 3rem;
+    margin-left: 1rem;
+  }
+
+  .nav button{
+    float: right;
+  }
+
+  .nav-overlay{ 
+    height: 0%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.8); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    -webkit-transition: height 0.7s ease-in-out; /* 0.7 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    -moz-transition: height 0.7s ease-in-out;
+    -o-transition: height 0.7s ease-in-out;
+    transition: height 0.7s ease-in-out;
+  }
+
+  .nav-overlay-content{
+    margin-top: 4rem;
+    margin-left: 2rem;
+  }
+
+  .nav-overlay-content li{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-right: 2rem;
+    border-bottom: 0.1rem solid gray;
+    display: none;
+  }
+
+  .nav-overlay-content li a{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .nav-overlay-content li a:hover {
+    color: gray;
+  }
+
+  .animated{
+    animation-duration: 2s;
+  }
+
+  .nav-up {
+      top: -4 rem;
+  }
+}
+/* -=-=-=-=-=-=-=-=-=-=HOME CSS=-=-=-=-=-=-=-=-=-=- */
+
+#home{
+  min-height: 100%;
+  background-color: black;  /*Default if the image isn't loaded*/
+  background: url('../img/bg.gif'); 
+  -webkit-background-size: cover; /*For bg to cover entire page*/
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center; /*For bg to be centered for smaller displays*/
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.line-elements {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #b8bfff;
+}
+
+.line-elements h6{
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+
+.line-elements h5{
+  font-family: 'Glober', 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+#home > div > h5{
+  padding-top: 9rem;
+  text-align: center;
+  font-family: 'Glober', 'Roboto', sans-serif;
+  color: #b8bfff;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+#title{
+  text-align: center;
+  font-family: 'Glober', sans-serif;
+  color: #b8bfff;
+  font-size: 3rem;
+  font-weight: 100;
+  -webkit-animation:  hue 40s infinite linear
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+.mousey {
+  margin:auto;
+  margin-top: 10rem;
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.45;
+  animation-name: blink;
+  animation-duration: 2.2s;
+  animation-iteration-count:infinite;
+}
+.scroller {
+  position: relative;
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+@keyframes blink{
+  0% {opacity: 0;}
+  50% {opacity: 0.3;}
+  100% {opacity: 0;}
+}
+
+/* -=-=-=-=-=-=-=-=-=-=ABOUT CSS=-=-=-=-=-=-=-=-=-=- */
+
+#particles-js{
+  /*padding-top: 3.5em;*/
+  width: 100%;
+  height: 100%;
+  background-color: #132028;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+
+}
+
+.about {
+  position: relative;
+  /*background-image: ADD SOMETHING FOR THE BREAK BETWEEN TWO DIVS AS IT LOOKS UGLY*/
+  /*box-shadow: 0px 1px 20px -20px #2b3c51;*/
+  text-align: center;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+@media screen and (min-width: 1000px){
+  .about{
+    padding: 0 5rem;
+  }
+}
+
+.about > div{
+  border-bottom: solid 0.1rem #b8bfff;
+}
+
+.about h2{
+  pointer-events: none;  /*THIS LINE IS TO CLICK THROUGH THE DIV AND CLICK ON SOMETHING UNDERNEATH IT*/
+
+}
+.about img{
+  width: 10rem;
+  height: 10rem;
+  -webkit-user-drag: none;
+  pointer-events: none;  /*THIS LINE IS TO CLICK THROUGH THE DIV AND CLICK ON SOMETHING UNDERNEATH IT*/
+
+}
+
+.about p{
+  color: #b8bfff;
+  font-size: 0.8rem;
+  font-weight: 100;
+  font-family: "Roboto";
+  z-index: 2;
+  text-align: justify;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=PROJECTS CSS=-=-=-=-=-=-=-=-=-=- */
+
+#projects{
+  background-color: #2f485f;
+  width: 100%;
+  min-height: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+#projects ul{
+  padding: 1rem;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  box-sizing: border-box;
+}
+
+#projects ul li{
+  display: inline-block;
+  position: relative;
+  margin: 1rem 1rem;
+}
+
+.projbox{
+  /*margin: 1.5rem 3.8rem;*/
+  width: 15rem;
+  height: 9rem;
+  -webkit-filter: grayscale(0.3); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0.3);
+  background-size: cover;
+  /*float: left;*/
+
+}
+
+.projbox:hover{
+  box-shadow: 2px 2px 10px 0px;
+  -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0);
+  cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+
+}
+
+.modal-content {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 15rem;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1000px){
+  .modal-content{
+    height: 15rem;
+  }
+}
+
+.modal-button {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 10rem;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.modal-button-close{
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.modal h2 {
+  padding: 1rem;
+  padding-bottom: 0;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  color: #b8bfff;
+}
+
+.modal p{
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  padding: 0 2rem;
+  font-weight: 100;
+  color: #b9bfff;
+}
+
+#proj-caption{
+  text-align: center;
+  font-size: 0.6rem;
+  padding: 0 0;
+  font-style: italic;
+}
+
+
+/* -=-=-=-=-=-=-=-=-=-=SKILLS CSS=-=-=-=-=-=-=-=-=-=- */
+
+#skills{
+  background-color: #132028;
+  width: 100%;
+  min-height: 100%;
+  text-align: center;
+}
+
+@media screen and (min-width: 1000px){
+#skills ul{
+  padding: 1rem;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  box-sizing: border-box;
+}
+
+#skills ul li{
+  display: inline-block;
+  position: relative;
+  margin: 0 1rem;
+}
+}
+.softwareDiv{
+  color:#b8bfff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+#skills h3{
+  font-weight: 300;
+}
+
+.softwareDiv li, .softwareDiv i, .softwareDiv h3{
+  transition: color 0.2s ease-in-out; 
+  -webkit-transition: color 0.2s ease-in-out; 
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+}
+.softwareDiv li:hover, .softwareDiv i:hover, .softwareDiv h3:hover{
+  color: white;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=POST-SKILLS CSS=-=-=-=-=-=-=-=-=-=- */
+#post-skills{
+  background-color: #1e2e3d;
+  width: 100%;
+  text-align: center;
+}
+.element{
+  color: white;
+}
+
+#post-skills h4{
+  font-family: 'Roboto',sans-serif;
+  font-weight: 100;
+  color: #b8bfff;
+  margin: 0 1rem;
+}
+.typed-cursor{
+  opacity: 1;
+  -webkit-animation: blinkfull 0.7s infinite;
+  -moz-animation: blinkfull 0.7s infinite;
+  animation: blinkfull 0.7s infinite;
+}
+
+@keyframes blinkfull{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.post-skills-button{
+  width: 7rem;
+  height: 2rem;
+  border: 0.1rem solid #b8bfff;
+  border-radius: 10%;
+  margin: 1rem auto;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.post-skills-button p{
+  color: #b8bfff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+  margin-top: 0.1rem;
+}
+
+.post-skills-button:hover{
+  background-color: #b8bfff;
+}
+.post-skills-button:hover p{
+  color: #1e2e3d;
+  font-weight: 300;
+}
+
+
+/* -=-=-=-=-=-=-=-=-=-=CONTACT CSS=-=-=-=-=-=-=-=-=-=- */
+
+#contact{
+  width: 100%;
+  display: inline-block;
+  background-color: #2f485f;
+  text-align: center;
+
+}
+
+#contact ul{
+  padding: 1rem;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  box-sizing: border-box;
+}
+
+#contact ul li{
+  display: inline-block;
+  position: relative;
+  margin: 0.1rem 1rem;
+  padding: 0 0.1rem;
+  font-size: 0.7  rem;
+}
+
+#contact a{
+  text-decoration: none;
+}
+
+.fa-envelope, .fa-linkedin, .fa-github, .fa-facebook-official{
+  color: #1e2e3d;
+  -webkit-transition: color 0.5s linear;
+  -moz-transition: color 0.5s linear;
+  -o-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+}
+.email:hover .fa-envelope{
+  color: #fef5e5;
+  cursor: pointer;
+}
+
+.linkedin:hover .fa-linkedin{
+  color: #007bb6;
+  cursor: pointer;
+}
+
+.github:hover .fa-github{
+  color: black;
+  cursor: pointer;
+}
+
+.facebook:hover .fa-facebook-official{
+  color: #3b5998;
+  cursor: pointer;
+}
+
+li p{
+  font-family: "Roboto";
+  font-size: 1.5em;
+  font-weight: 300;
+  opacity: 0;
+  display: block;
+  margin-top: 0;
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+.email p{
+  color: #fef5e5;
+}
+
+.github p{
+  color: black;
+}
+
+.linkedin p{
+  color: #007bb6;
+}
+
+.facebook p{
+  color: #3b5998;
+}
+
+.email:hover p{
+  opacity: 1;
+}
+
+.github:hover p{
+  opacity: 1;
+}
+
+.linkedin:hover p{
+  opacity: 1;
+}
+
+.facebook:hover p{
+  opacity: 1;
+}
+
+/* =============================================================================
+   Extra CSS
+   ========================================================================== */
+
+/* -=-=-=-=-=-=-=-=-=-=HAMBURGER ANIMATION=-=-=-=-=-=-=-=-=-=- */
+@media screen and (max-width: 768px){
+  .hamburger {
+    padding: 0.6rem;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: #b8bfff;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible; }
+    .hamburger:hover {
+      opacity: 0.7; }
+
+  .hamburger-box {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    position: relative; }
+
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -0.1rem; }
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+      width: 2rem;
+      height: 0.15rem;
+      background-color: #b8bfff;
+      border-radius: 0.1rem;
+      position: absolute;
+      transition-property: transform;
+      transition-duration: 0.15s;
+      transition-timing-function: ease; }
+    .hamburger-inner::before, .hamburger-inner::after {
+      content: "";
+      display: block; }
+    .hamburger-inner::before {
+      top: -0.5rem; }
+    .hamburger-inner::after {
+      bottom: -0.5rem; }
+
+  .hamburger--spin .hamburger-inner {
+    transition-duration: 0.22s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    .hamburger--spin .hamburger-inner::before {
+      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    .hamburger--spin .hamburger-inner::after {
+      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  .hamburger--spin.is-active .hamburger-inner {
+    transform: rotate(225deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .hamburger--spin.is-active .hamburger-inner::before {
+      top: 0;
+      opacity: 0;
+      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    .hamburger--spin.is-active .hamburger-inner::after {
+      bottom: 0;
+      transform: rotate(-90deg);
+      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+}
