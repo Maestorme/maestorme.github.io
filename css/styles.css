@@ -26,8 +26,8 @@ body {
 @import url('https://fonts.googleapis.com/css?family=Raleway:100|Roboto:100|VT323|Cinzel');
 
 @font-face {
-  font-family: 'Glober';
-  src: url('../fonts/glober.otf');
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Hairline.ttf');
 }
 
 ::selection{
@@ -66,7 +66,7 @@ body {
 .heading {
   padding: 1rem;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Lato", sans-serif;
   font-size: 2.3rem;
   font-weight: 100;
   color: #b8bfff;
@@ -139,7 +139,7 @@ body {
   .nav h3{
     padding-left: 0.4rem;
     float: left;
-    font-family: "Roboto";
+    font-family: "Roboto", "Lato";
     color: #b8bfff;
     font-weight: 100;
     font-size: 1rem;
@@ -162,7 +162,7 @@ body {
 
   .nav .nav-content-big li div{
     color: #b8bfff;
-    font-family: "Glober";
+    font-family: "Lato";
     font-size: 1rem;
     font-weight: 100;
     width: 4rem;
@@ -208,7 +208,7 @@ body {
 
   .nav h3{
     float: left;
-    font-family: "Roboto";
+    font-family: "Roboto", "Lato";
     font-weight: 100;
     color: #b8bfff;
     line-height: 3rem;
@@ -250,7 +250,7 @@ body {
 
   .nav-overlay-content li a{
     color: white;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Lato", sans-serif;
     font-weight: 300;
     font-size: 1rem;
   }
@@ -285,7 +285,7 @@ body {
 
 .line-elements {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', "Lato", sans-serif;
   color: #b8bfff;
 }
 
@@ -296,14 +296,14 @@ body {
 }
 
 .line-elements h5{
-  font-family: 'Glober', 'Roboto', sans-serif;
+  font-family: 'Lato', 'Roboto', "Lato", sans-serif;
   font-size: 1.3rem;
   font-weight: 100;
 }
 #home > div > h5{
   padding-top: 9rem;
   text-align: center;
-  font-family: 'Glober', 'Roboto', sans-serif;
+  font-family: 'Lato', 'Roboto', "Lato", sans-serif;
   color: #b8bfff;
   font-size: 1.5rem;
   font-weight: 100;
@@ -311,7 +311,7 @@ body {
 
 #title{
   text-align: center;
-  font-family: 'Glober', sans-serif;
+  font-family: 'Lato', 'Roboto', "Lato", sans-serif;
   color: #b8bfff;
   font-size: 3rem;
   font-weight: 100;
@@ -415,7 +415,7 @@ body {
   color: #b8bfff;
   font-size: 0.8rem;
   font-weight: 100;
-  font-family: "Roboto";
+  font-family: "Roboto", "Lato";
   z-index: 2;
   text-align: justify;
 }
@@ -513,7 +513,7 @@ body {
   padding: 1rem;
   padding-bottom: 0;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Lato", sans-serif;
   font-size: 2rem;
   font-weight: 100;
   color: #b8bfff;
@@ -521,7 +521,7 @@ body {
 
 .modal p{
   text-align: justify;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Lato", sans-serif;
   font-size: 0.9rem;
   padding: 0 2rem;
   font-weight: 100;
@@ -563,7 +563,7 @@ body {
 }
 .softwareDiv{
   color:#b8bfff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', "Lato", sans-serif;
   font-weight: 100;
   margin: 1rem 0;
   font-size: 1rem;
@@ -594,7 +594,7 @@ body {
 }
 
 #post-skills h4{
-  font-family: 'Roboto',sans-serif;
+  font-family: 'Roboto', "Lato",sans-serif;
   font-weight: 100;
   color: #b8bfff;
   margin: 0 1rem;
@@ -623,7 +623,7 @@ body {
 
 .post-skills-button p{
   color: #b8bfff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Lato", sans-serif;
   font-weight: 100;
   font-size: 1.2rem;
   transition: all 0.2s ease-in-out;
@@ -698,7 +698,7 @@ body {
 }
 
 li p{
-  font-family: "Roboto";
+  font-family: "Roboto", "Lato";
   font-size: 1.5em;
   font-weight: 300;
   opacity: 0;
