@@ -64,7 +64,12 @@ $(window).on("navigate", function (event, data) {
 
 function display_details(){
   //TITLE ON TOP OF MODAL
-  if(projID == 5){
+  if(projID == 6){
+    $('#proj-title').html("MYOnnaise");
+    $('#proj-caption').html("- \"Physiotherapy through a fun motion sensitive game that is so smooth you may even say its mayonnaise\"");
+    $('#proj-text').html("This hack is the culmination of a web application and a hardware based hack. It uses a MYO armband as a connection between motion and gaming. The EMG sensors pick up subtle hand gestures which are then translated into commands within a game. The game itself is a very natural plat-former with support for two characters (and two armbands!). The main point is to assist people undergoing rehabilitation in parts of the arm. The contraction and expansion of certain muscle groups associated with the gestures help accelerate this process! The armband transmits these signals to a Node.js server which looks for certain gestures and activates the corresponding actions in the game. This project also incorporates from a physiotherapist who gave insights on which muscles require more attention. It also won the Hacker's Choice award and the 'Objectively Human' (By Liberty Mutual) at the MadHacks hackathon held in Madission, Wisconsin.<br><a href='www.devpost.com/software/myonnaise-ya58l3' class = 'link-blue-no-underline'>www.devpost.com/software/myonnaise</a>");
+  }
+  else if(projID == 5){
     $('#proj-title').html("Snippy");
     $('#proj-caption').html("- \"He shares his code, she shares her code, EVERYBODY SHARES THEIR CODE\"");
     $('#proj-text').html("I built this website using the <span class='bolden'>MEAN Stack</span> (MongoDB, Express, Angular, Node) where people can <span class='bolden'>register and share their code</span>. When users log-in, they are greeted with a simple page that lets them either type-in their code or upload a file that contains it. Users are also able to select the syntax for some sweet <span class='bolden'>syntax highlighting</span> and are able to customize what the public can see. Each code snippet can be viewed with a <span class='bolden'>unique 7 character ID</span> that doesn't require any log-in credentials. The database used is MongoDB, so this also eliminates the problems of SQL injection. Future plans would be to hash the passwords and improve security. What started as a result of simple experimentation with the MEAN Stack turned out into something really interesting and worthwhile to do!<br><a href='www.github.com/maestorme/snippy' class = 'link-blue-no-underline'>www.github.com/maestorme/snippy</a>");
